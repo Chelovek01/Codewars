@@ -1,0 +1,21 @@
+'''Details:
+There is an array with some numbers. All numbers are equal except for one. Try to find it!
+
+find_uniq([ 1, 1, 1, 2, 1, 1 ]) == 2
+find_uniq([ 0, 0, 0.55, 0, 0 ]) == 0.55
+It’s guaranteed that array contains at least 3 numbers.
+
+The tests contain some very huge arrays, so think about performance.
+------------------------------------------------------------------------------------------------------------------------
+My solution:
+'''
+
+def find_uniq(arr):
+    if arr.count(arr[0]) != 1:
+        x = arr[0]
+    else:
+        return arr[0]
+
+    y = set(arr)
+    y.discard(x)
+    return y.pop()
