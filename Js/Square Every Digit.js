@@ -8,3 +8,5 @@ function squareDigits(num){
   return parseInt(result);
 
 }
+
+Почему?
